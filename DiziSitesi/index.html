@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film & Dizi Sitesi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+   <style>
+body{
+    background-image: url('images.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+   </style>
+    
+
+   
+    <nav>
+        <ul>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="diziler.html">Diziler</a></li>
+            <li><a href="filmler.html">Filmler</a></li>
+            <li><a href="favoriler.html">Favoriler</a></li>
+            <li><a href="izlenecekler.html">İzlenecekler</a></li>
+        </ul>
+    </nav>
+
+
+
+    <header>
+        <div class="banner-container">
+            <h3><b>The Fiery Priest</b></h3>
+            <img id="main-banner" src="https://m.media-amazon.com/images/M/MV5BMzliODJhOWItODhjMC00NzU3LTk2ZmItZGNkNTU2YzZjYzQ5XkEyXkFqcGc@._V1_.jpg " alt="Ana Dizi">
+
+        </div>
+    </header>
+
+
+
+<section class = "favorites">
+    <h2>Favorilerim</h2>
+    <div class = "fav-container" id="favList"></div>
+</section>
+
+
+
+    <!-- Yeni Dizi Ekleme -->
+    <section class="add-movie">
+        <h2>Yeni Dizi / Film Ekle</h2>
+        <input type="text" id="title" placeholder="Dizi / Film Adı">
+        <input type="text" id="imageUrl" placeholder="Afiş URL">
+        <input type="text" id="link" placeholder="Dizi Linki">
+        
+        <!-- İzledim veya İzlenecek Seçeneği -->
+        <select id="category">
+            <option value="watched">İzledim</option>
+            <option value="watchlist">İzlenecek</option>
+        </select>
+
+        <button onclick="addMovie()">Ekle</button>
+    </section>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
