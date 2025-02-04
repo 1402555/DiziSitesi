@@ -201,6 +201,48 @@ body.diziler h1 {
 
 
 
+
+
+/* ✅ Hamburger Menü Stili (Tablet ve Mobil İçin) */
+.menu-toggle {
+    display: none; /* Masaüstünde gizli */
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    background: skyblue;
+    padding: 10px;
+}
+
+/* ✅ Tablet ve Mobil İçin Navbar Düzeni */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Tablet ve mobilde görünsün */
+    }
+
+    nav ul {
+        display: none; /* Başlangıçta gizli */
+        flex-direction: column;
+        text-align: center;
+        background: skyblue;
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    nav ul.show {
+        display: flex; /* Açılınca görünür hale gelsin */
+    }
+}
+
+
+
+
+
+
+
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
