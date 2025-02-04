@@ -204,46 +204,44 @@ body.diziler h1 {
 
 
 
+/* ✅ Hamburger Menü Stili */
+.menu-toggle {
+    display: none; /* Masaüstünde gizli */
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    background: skyblue;
+    padding: 10px;
+}
 
+/* ✅ Tablet ve Mobil İçin Navbar Dikey Hale Gelsin */
 @media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Tablet ve mobilde görünsün */
+    }
+
     nav ul {
-        flex-direction: column; 
-        align-items: center; 
+        display: none; /* Menü başlangıçta gizli */
+        flex-direction: column;
+        text-align: center;
+        background: skyblue;
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: 0;
         padding: 10px 0;
     }
 
-    nav ul li {
-        margin: 10px 0; 
-    }
-
-    header img {
-        height: auto; 
-        max-height: 400px; 
+    nav ul.show {
+        display: flex; /* Açılınca görünür hale gelsin */
     }
 }
 
-
-@media (max-width: 480px) {
-    nav ul {
-        flex-direction: column; 
-        padding: 5px 0;
-    }
-
-    nav ul li {
-        margin: 8px 0; 
-    }
-
-    nav ul li a {
-        font-size: 18px; 
-        padding: 8px; 
-    }
-
-    header img {
-        height: auto; 
-        max-height: 300px; 
-    }
+/* ✅ Ana İçeriği Yukarı Kaydır */
+body {
+    padding-top: 60px; /* Navbar sabit olduğu için içerik üst üste binmesin */
 }
-
 
 
 
