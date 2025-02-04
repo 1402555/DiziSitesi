@@ -11,7 +11,7 @@ function getFavorites() {
     return JSON.parse(localStorage.getItem("favorites")) || [];
 }
 
-// 📌 Yeni film/dizi ekleme
+
 function addMovie() {
     let title = document.getElementById("title").value;
     let imageUrl = document.getElementById("imageUrl").value;
@@ -41,7 +41,7 @@ function addMovie() {
     renderWatchlist();
 }
 
-// 📌 İzlenen dizileri ekrana yazdırma (diziler.html için)
+
 function renderWatchedMovies() {
     let watchedMovies = getWatchedMovies();
     let watchedListDiv = document.getElementById("watchedList");
@@ -63,7 +63,7 @@ function renderWatchedMovies() {
     }
 }
 
-// 📌 İzlenecek dizileri ekrana yazdırma (izlenecekler.html için)
+
 function renderWatchlist() {
     let watchlist = getWatchlist();
     let watchListDiv = document.getElementById("İzlenecekListesi");
@@ -85,7 +85,7 @@ function renderWatchlist() {
     }
 }
 
-// 📌 Favorilere ekleme
+
 function addToFavorites(index, category) {
     let favorites = getFavorites();
     let movieList = category === "watched" ? getWatchedMovies() : getWatchlist();
@@ -103,7 +103,7 @@ function addToFavorites(index, category) {
     renderFavorites();
 }
 
-// 📌 Favorilerden çıkarma
+
 function removeFavorite(index) {
     let favorites = getFavorites();
     favorites.splice(index, 1);
@@ -111,7 +111,7 @@ function removeFavorite(index) {
     renderFavorites();
 }
 
-// 📌 Favorileri ekrana yazdırma (Ana Sayfa ve Favoriler Sayfası)
+
 function renderFavorites() {
     let favorites = getFavorites();
     let favListIndex = document.getElementById("favList"); // Ana Sayfa Kaydırmalı Favoriler
@@ -157,7 +157,7 @@ function renderFavorites() {
     
 }
 
-// 📌 Diziyi tamamen silme
+
 function deleteMovie(index, category) {
     if (category === "watched") {
         let watchedMovies = getWatchedMovies();
@@ -175,7 +175,7 @@ function deleteMovie(index, category) {
     removeFromFavoritesByTitle(category === "watched" ? getWatchedMovies()[index]?.title : getWatchlist()[index]?.title);
 }
 
-// 📌 Favorilerden isme göre silme (Dizi silinince favorilerden de kalkmalı)
+
 function removeFromFavoritesByTitle(title) {
     if (!title) return;
 
@@ -185,7 +185,7 @@ function removeFromFavoritesByTitle(title) {
     renderFavorites();
 }
 
-// 📌 Sayfa yüklendiğinde çalıştır
+
 document.addEventListener("DOMContentLoaded", () => {
     renderWatchedMovies();
     renderWatchlist();
