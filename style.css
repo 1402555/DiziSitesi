@@ -1,0 +1,254 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #111;
+    color: white;
+}
+
+
+
+nav{
+
+    position: fixed; /* Navbar'ı ekranın en üstüne sabitle */
+    top: 0; /* Yukarı yapıştır */
+    left: 0;
+    width: 100%; /* Tam genişlik */
+    z-index: 1000; /* Diğer elemanların üstünde dursun */
+    background: skyblue; /* Mevcut arka plan rengi */
+    padding: 0; 
+
+}
+
+
+
+
+nav ul {
+    
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0; /* Üst ve alt padding'i küçült */
+    margin: 0; /* Varsayılan boşlukları kaldır */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color:black;
+    font-size: 20px;
+    transition: color 0.3s ease, background 0.3s ease; /* Geçiş efekti ekler */
+}
+
+nav ul li a:hover {
+    color:lightseagreen; /* Yazı rengi değişsin */
+    background: white; /* Arka plan değişsin */
+    padding: 5px 10px; /* Biraz iç boşluk ekleyelim */
+    border-radius: 5px; /* Köşeleri yuvarlak yap */
+}
+
+
+
+
+
+
+
+
+/* Ana Dizi Afişi */
+
+header img {
+    
+    width: 100%;
+    max-width: 100%; 
+    max-height: 450px; 
+    object-fit: cover; 
+    object-position: top;
+    display: flex;
+    margin-top: 10px;
+    
+}
+
+.banner-container {
+    max-height: none !important; /* Önceden tanımlı max-height'ı kaldır */
+    height: auto;
+}
+
+
+header h3{
+    color:black;
+    font-size: 25px;
+    margin-top: 60px;
+}
+
+
+
+
+.banner-container {
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden; /* Resmin taşmasını önler */
+}
+
+.banner-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Resmi sayfanın genişliğine sığdırır */
+    display: block;
+}
+
+
+
+
+
+
+/* Favorilerim */
+.favorites, .movies, .add-movie {
+    padding: 20px;
+}
+
+/* Favoriler sayfasındaki dizileri yan yana sıralama */
+.fav-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.fav-card {
+    width: 200px;
+    background: #222;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.fav-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+/* Dizi Listesi */
+
+
+.movie-grid {
+    display: flex;
+    flex-wrap: wrap; /* Taşan elemanları alt satıra geçirir */
+    gap: 15px; /* Kartlar arasındaki boşluk */
+    justify-content: center; /* Ortaya hizalama */
+}
+
+
+
+.movie-item {
+    background: #222;
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.movie-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+#watchedList img, #izlenecekListesi img {
+    width: 200px;  /* Resim genişliği */
+    height: 300px; /* Resim yüksekliği */
+    object-fit: cover; /* Orantıyı bozmadan kırp */
+    border-radius: 5px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+/* Favorilerim kaydırmalı liste */
+.favorites {
+    padding: 20px;
+}
+
+.fav-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+}
+
+.fav-container img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* Sadece diziler.html'deki başlığı aşağı kaydır */
+body.diziler h1 {
+    margin-top: 70px; /* 50 piksel aşağı kaydır */
+}
+
+body.izlenecekler h1{
+    margin-top: 70px;
+
+}
+
+
+
+
+
+
+
+/* ✅ 1. Tablet Görünümü (768px ve daha küçük ekranlar için) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Navbar'ı dikey hale getir */
+        align-items: center; /* Ortala */
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Menü öğeleri arasında boşluk bırak */
+    }
+
+    header img {
+        height: auto; /* Resmin oranını koru */
+        max-height: 400px; /* Çok büyük olmasını engelle */
+    }
+}
+
+/* ✅ 2. Mobil Görünümü (480px ve daha küçük ekranlar için) */
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column; /* Mobilde navbar'ı dikey yap */
+        padding: 5px 0;
+    }
+
+    nav ul li {
+        margin: 8px 0; /* Menü öğelerini alt alta yap ve boşluk ekle */
+    }
+
+    nav ul li a {
+        font-size: 18px; /* Mobilde daha iyi görünmesi için yazıyı küçült */
+        padding: 8px; /* Dokunmatik ekran için daha büyük tıklama alanı */
+    }
+
+    header img {
+        height: auto; /* Resmin oranını koru */
+        max-height: 300px; /* Çok büyük olmasını engelle */
+    }
+}
+
+
+
+
+
+
