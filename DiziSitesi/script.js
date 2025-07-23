@@ -1,4 +1,4 @@
-// 📌 LocalStorage'dan verileri çekme fonksiyonları
+
 function getWatchedMovies() {
     return JSON.parse(localStorage.getItem("watchedMovies")) || [];
 }
@@ -197,7 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-// 📌 Hamburger Menü Aç/Kapa Fonksiyonu
+
 document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.querySelector(".menu-toggle");
     const navMenu = document.querySelector("nav ul");
