@@ -201,7 +201,7 @@ body.diziler h1 {
 
 
 
-/* ✅ Hamburger Menü Stili (Tablet ve Mobil İçin) */
+/* (Tablet ve Mobil İçin) */
 .menu-toggle {
     display: none; /* Masaüstünde gizli */
     font-size: 30px;
@@ -216,14 +216,14 @@ body.diziler h1 {
     z-index: 1001;
 }
 
-/* ✅ Tablet ve Mobil İçin Navbar ve Genel Düzen */
+
 @media (max-width: 768px) {
-    /* ✅ Hamburger menüyü görünür yap */
+   
     .menu-toggle {
         display: block;
     }
 
-    /* ✅ Navbar’ı başlangıçta gizle */
+  
     nav ul {
         display: none;
         flex-direction: column;
@@ -238,17 +238,16 @@ body.diziler h1 {
          z-index: 1000;
     }
 
-    /* ✅ Menü açıldığında görünmesini sağla */
+   
     nav ul.show {
         display: flex;
     }
 
-    /* ✅ Menü elemanları için ayarlar */
     nav ul li {
         margin: 10px 0;
     }
 
-    /* ✅ Banner resminin taşmasını engelle */
+   
     header img {
         height: auto;
         max-height: 400px;
