@@ -135,7 +135,7 @@ function renderFavorites() {
     if (favListPage) {
         favListPage.innerHTML = ""; // Önce eski içeriği temizle
         let favGrid = document.createElement("div"); // Yeni bir div oluştur
-        favGrid.classList.add("fav-grid"); // fav-grid sınıfını ekle
+        favGrid.classList.add("fav-grid"); 
     
         favorites.forEach((movie, index) => {
             let favCard = document.createElement("div");
@@ -148,10 +148,10 @@ function renderFavorites() {
                 <button onclick="removeFavorite(${index})">Favorilerden Kaldır</button>
             `;
     
-            favGrid.appendChild(favCard); // Yeni kartları ekle
+            favGrid.appendChild(favCard); 
         });
     
-        favListPage.appendChild(favGrid); // Grid div’ini ekle
+        favListPage.appendChild(favGrid); 
     }
     
     
